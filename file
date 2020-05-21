@@ -1,0 +1,7 @@
+# trying exercise 2 : dev strategy
+
+pushing directly to master
+
+each branch/feature should push directly to master /origin
+
+$ git checkout -b feature1 master

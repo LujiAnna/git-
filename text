@@ -107,6 +107,7 @@ $ git status
 > both file and readme.md are red . what about text ? 
 this file am currently writing in doesnt seem to 
 
+# creating a feature1 branch 
 # branch off from master branch 
 //$ git checkout -b feature1 master 
 > switch to  new branch feature1 
@@ -138,6 +139,52 @@ $ git commit -m 'first command in first feature'
 # remember nothing shows in the github as nothing is pushed yet 
 # imncorporating a finished feature1 on master, switch branch to master 
 $ git checkout master
+# check which branch you had 
+$ git branch 
+# you should be on master
+# first add and commmit all the new changes in files at master 
+which ones are they?
+$ git status 
+> notice file file is no longer red, only text (this one ), and other files readme 
+$ git add text 
+# check to see how it all is 
+$ git status
+> after tracking/add text, text file is green now  
+# add  changes / commit  
+$ git commit -m 'added stuff in text before after branching off and back '
+# about to push feature1 branch ...
+
+
+after adding the touched text file thru master and while in master...
+!!!do MERGE of feature1 to master, so u can push the master back to origin 
+and NOT the feature as is back to origin as in homework2 dev-strategy 
+
+# first check which branches names are there especially one u want to merge 
+$ git branch 
+# choose branch you want to merge back to master 
+$ git merge feature1 
+
+# see how to deal with merge msg
+
+# next time try to use --no -ff for no fastforward to create a new commit 
+ even if merge could be performed with fast-forward 
+
+$ git branch 
+$ git status
+
+!!!!!!# time to push the master whihc merged with feature1 branch back to remote 
+# REMEMBER you are pushing MERGED MASTER TO ORIGIN !!!VERY IMPORTANT ***
+
+# you should no commits yet, until you have accepted the Pull (which is push really) request on the particular repo
+!!!!! # so check your github repo 
+!!!! # careful you might see changes after some minutes! so PATIENCE
+
+
+
+
+
+
+
 
 
 
