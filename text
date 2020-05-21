@@ -72,7 +72,7 @@ $ git commit - am 'typo on prior...' *****?? not showing on github. showed after
 > just do add, commit then push immediately
 > chech github > still first and second commit
 > question, what if you commit before adding
-$ git commit -m 'commit bofere adding' .....DIDNT SHOW UP ON GITHUB
+$ git commit -m 'commit bofere adding' ??????DIDNT SHOW UP ON GITHUB, coz u didnt ADD!!!
 >on branch master
 > master is ahead of o/m by 2 commits
 > lets go ahead and push ..remember we didnt add sth before 'commit b4 adding'
@@ -82,3 +82,73 @@ $ git commit -am 'fifth commit before push'
 
 > Question: if i change repos name locally, and needs to perform push, what happens
 > quesstion next : what happens if i change name of file in a repo (case 1 locally, case to remote)
+
+====================?BRANCHING OFF MASTER: github/git-flow==================
+- feature branch
+- direct deplyment
+- regular deployment
+- continuos delivery
+- hw 2 : dev strategy
+description : commit to master separate branches, 
+then push the *master to github. then iterate (git push origin master)
+- do same for branch 2, 3 , ...etc
+
+# created files : file and readme 
+$ touch file readme.md 
+# create branch file 
+$ git branch file 
+# check to see which branch you are currently in 
+$ git branch 
+> currently its master and it is green 
+> branch is up to date with o/m 
+> git add file : to update what will be commited 
+# check to see status of your files 
+$ git status 
+> both file and readme.md are red . what about text ? 
+this file am currently writing in doesnt seem to 
+
+# branch off from master branch 
+//$ git checkout -b feature1 master 
+> switch to  new branch feature1 
+# question, what is -b flag in git? 
+: `git` tells the console to load git program from the system path , 
+after that, each word gets inputted into the git program 
+To get help to see which types of commands we can input in git, use --help 
+$ git --help 
+> git help -a or git help -g or git help <concept> to read about 
+specific subcommand/guide/concept 
+> Read more about this from git documentation found at git-scm.com/docs/git-checkout ...
+
+IMPORTANT: from what we have practised above, it is important to add and commit 
+you dont have to push, as all commits will show up either way in any PUSH you do further down the line 
+
+back to creating branch and push directly!
+
+$ git status
+still reds 
+$ git branch
+master and file 
+$ git checkout -b feature1 master
+> M   text ...what does this even mean ????
+> Switched to a new branch 'feature1'
+# maybe add particular file 
+$ git add file 
+# maybe commit changes as well
+$ git commit -m 'first command in first feature'
+# remember nothing shows in the github as nothing is pushed yet 
+# imncorporating a finished feature1 on master, switch branch to master 
+$ git checkout master
+
+
+
+
+ 
+====================BRANCHING OFF MASTER: github/git-flow==================
+- feature branch
+- hw 1 : branchies
+description : commit to master separate branches, 
+then push that particular *branch to github /origin. then iterate (git push origin feature)
+- do same for branch 2, 3 , ...etc
+
+
+
