@@ -49,6 +49,21 @@ remote:   https://github.com/LujiAnna/git_rename_github.git
 $ git status
 > wants to stage change for commit
 > branch is uptodate with origin/master
-$ git commit -am '
+$ git commit -am 'second commit..'
+>successfully
+$ git status
+> on branch master
+> branch is ahaed of o/m by 1 commit 
+> git push: to publish your local commits
+$ git push origin master
+> still saying thie repo moved, use new location.
+FREESTYLE 
+> thinking of ...reclone? or pull
+> lets try to do a PR
+> nope . stop. redo everything from the beginning and reclone the new repo
+> OR rename local back to how it was previous
+> then, rename the remote repo back as well
+
+
 > Question: if i change repos name locally, and needs to perform push, what happens
 > quesstion next : what happens if i change name of file in a repo (case 1 locally, case to remote)
