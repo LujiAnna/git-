@@ -34,7 +34,7 @@ $ git status
 > !!! git -A, --all: add changes from all tracked and untracked files
 > HINT: always add then commit your changes
 > at this point, nothing shows on github
-$ git commit -m 'first commit of text'
+$ git commit -m 'first commit of text' *************************shows on github
 > successfully commited. but only in my local repo. 
 > check remote repo shows no activity
 > i need to update the remote (origin) with local (master) (which has a different name now)
@@ -49,7 +49,7 @@ remote:   https://github.com/LujiAnna/git_rename_github.git
 $ git status
 > wants to stage change for commit
 > branch is uptodate with origin/master
-$ git commit -am 'second commit..'
+$ git commit -am 'second commit..'  *************************shows on github
 >successfully
 $ git status
 > on branch master
@@ -61,8 +61,13 @@ FREESTYLE
 > thinking of ...reclone? or pull
 > lets try to do a PR
 > nope . stop. redo everything from the beginning and reclone the new repo
-> OR rename local back to how it was previous
-> then, rename the remote repo back as well
+> OR rename local back to how it was previous : git-
+> then, rename the remote repo back as well to git-
+$ git status
+$ git commit - am 'back to original'  ????????????- not showing on github 
+> push wasnt done yet
+$ git status
+
 
 
 > Question: if i change repos name locally, and needs to perform push, what happens
