@@ -5,3 +5,5 @@ pushing directly to master
 each branch/feature should push directly to master /origin
 
 $ git checkout -b feature1 master
+
+$ git checkout -b feature2 master

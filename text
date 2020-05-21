@@ -201,13 +201,15 @@ $ git add file(1)
 $ git commit -m 'another tweak'
 5. checkout to master 
 $ git checkout master
+---make sure you are in master branch
+$ git branch 
 --- you might need to add some changes from the other file running with master
-$git status
+$ git status
 choose file to add in master
 $ git add particularfile
 $ git commit -m 'identify msg'
 6. MERGE feature2 with master with no fastforward option 
-$ git merge --no-f feature2
+$ git merge --no-ff feature2
 7. PUSH back to remote
 $ git push origin master
 8. observe your merged branch if has been pushed back to master from github-insight-network 
