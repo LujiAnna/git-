@@ -55,7 +55,7 @@ $ git status
 > on branch master
 > branch is ahaed of o/m by 1 commit 
 > git push: to publish your local commits
-$ git push origin master
+$ git push origin master  **************MUST DO THIS!!!!!!!!!!!!
 > still saying thie repo moved, use new location.
 FREESTYLE 
 > thinking of ...reclone? or pull
@@ -64,11 +64,21 @@ FREESTYLE
 > OR rename local back to how it was previous : git-
 > then, rename the remote repo back as well to git-
 $ git status
-$ git commit - am 'back to original'  ????????????- not showing on github 
+$ git commit - am 'back to original'  ****?????- not showing on github. showed after push 
 > push wasnt done yet
 $ git status
-
-
+$ git commit - am 'typo on prior...' *****?? not showing on github. showed after push
+> git status
+> just do add, commit then push immediately
+> chech github > still first and second commit
+> question, what if you commit before adding
+$ git commit -m 'commit bofere adding' .....DIDNT SHOW UP ON GITHUB
+>on branch master
+> master is ahead of o/m by 2 commits
+> lets go ahead and push ..remember we didnt add sth before 'commit b4 adding'
+$ git push origin master  **************MUST DO THIS!!!!!!!!!!!!
+> check in github
+$ git commit -am 'fifth commit before push'
 
 > Question: if i change repos name locally, and needs to perform push, what happens
 > quesstion next : what happens if i change name of file in a repo (case 1 locally, case to remote)
