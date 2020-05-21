@@ -177,18 +177,45 @@ $ git status
 
 # you should no commits yet, until you have accepted the Pull (which is push really) request on the particular repo
 !!!!! # so check your github repo 
-!!!! # careful you might see changes after some minutes! so PATIENCE
+!!!! # didnt work, must be the weird merge msg 
+try using --no -f for no fast forward when merging
+then check git branch and git status
+$ git branch
+> all branches present, feature1, master and another one 
+$ git status 
+> red text file and others, but green file file
+# now while in master, do the branch merge again to master 
+$ git merge --no-f feature1  (no space in btn)
+> says already uptodate
+$ git push origin master 
 
+NOW: try to replicate again what you have done
+1. create branch off master: call it feature2 
+$ git checkout -b feature2 master 
+2. make sure you have checked out 
+$ git branch
+3. do anything with anything whatever
+$ touch file2 or add some changes to say file and save
+4. save, add and commited 
+$ git add file(1)
+$ git commit -m 'another tweak'
+5. checkout to master 
+$ git checkout master
+--- you might need to add some changes from the other file running with master
+$git status
+choose file to add in master
+$ git add particularfile
+$ git commit -m 'identify msg'
+6. MERGE feature2 with master with no fastforward option 
+$ git merge --no-f feature2
+7. PUSH back to remote
+$ git push origin master
+8. observe your merged branch if has been pushed back to master from github-insight-network 
 
-
-
-
-
-
-
-
-
-
+write commands of the above.
+see that you dont miss any step 
+if error, write why and write in capital what you missed and command you missed
+try to do this off your memory 
  
 ====================BRANCHING OFF MASTER: github/git-flow==================
 - feature branch
