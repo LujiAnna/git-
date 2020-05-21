@@ -222,7 +222,21 @@ try to do this off your memory
 GOOD JOB.
 EVERYTHING WORKS FINE!!
 
-small problem: I have only one branch 
+small problem: I have only one branch on github
+I created 2 new branches using the command line, and when I use the command 'git branch' I can see all of my branches in the window, but when I used the command 'git push' I get a message that says, "nothing to commit, working directory clean' and so I'm not seeing my new branches on github.com.
+There is appearance of branches trees in network BUT not in branches-lists ..all comments are there nevertheless
+
+!!!! so add another STEP 9 to push origin feature 
+
+#swith back to feature3 
+$ git checkout feature3 
+$ git push origin feature3
+#feature3 is not merged, hence it appears in network but and in github commit 
+#try pushing feature2 while at master 
+ $ git push origin feature2
+> create a pull request on github to merge feature3 as it was not merged 
+
+
 
  
 ====================BRANCHING OFF MASTER: github/git-flow==================
