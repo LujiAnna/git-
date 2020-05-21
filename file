@@ -13,3 +13,9 @@ performing with no- merge . skipp step no.8
 but add 
 
 git push origin feature3
+
+github asked to merge feature3, even when pushed feature2 branch with
+
+git push origin feature2
+
+
