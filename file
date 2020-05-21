@@ -10,3 +10,6 @@ $ git checkout -b feature2 master
 
 performing with no- merge . skipp step no.8
 
+but add 
+
+git push origin feature3
