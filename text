@@ -14,6 +14,41 @@ ls
 > shows the new file text-- the one am writing all this in
 $ git status
 > shows red text as untracked file
+> !!! git add file: use this to track
 // oops...before tracking, I changed again this text file by writing this 
-line, just save, no need to commit as fike is still untracked yet (no git add, just quick check with git status.. which still shows the red text file as untracked)
-$ git add -m '
+line, just save, no need to commit as fike is still untracked yet (no git add, just quick check with git status.. which still shows the red text file as untracked) . now do the add (track your changes in file)
+$ git add text
+> check status
+$ git status
+> on branch master: this text file is tracked in branch master
+> no commits yet : commit and msg is not done yet
+> !!! can use git rm --cashed : to unstage the tracking
+> the file is green. indicating that its being tracked
+// oops again...after tracking...i modified this text file but writing this
+how does the file react in git? (use git status)i need to save. but do i need to retrack? 
+what if i go ahead and commit as is? are the new changes incorporated 
+$ git status
+> shows that changes are not staged. 
+> !!! git add file: is suggested to update what will be commited
+> !!! git restore file: to discard chnges in the working directory 
+> !!! git -A, --all: add changes from all tracked and untracked files
+> HINT: always add then commit your changes
+> at this point, nothing shows on github
+$ git commit -m 'first commit of text'
+> successfully commited. but only in my local repo. 
+> check remote repo shows no activity
+> i need to update the remote (origin) with local (master) (which has a different name now)
+$ git push origin master
+>remote: This repository moved. Please use the new location:
+remote:   https://github.com/LujiAnna/git_rename_github.git
+> check remote repo : nothing shows
+> i need to rename this repo now
+> $ mv <source_directory> <target_directory>
+> linux said no such file/directory
+> try to hard rename
+$ git status
+> wants to stage change for commit
+> branch is uptodate with origin/master
+$ git commit -am '
+> Question: if i change repos name locally, and needs to perform push, what happens
+> quesstion next : what happens if i change name of file in a repo (case 1 locally, case to remote)
