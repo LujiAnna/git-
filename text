@@ -83,14 +83,13 @@ $ git commit -am 'fifth commit before push'
 > Question: if i change repos name locally, and needs to perform push, what happens
 > quesstion next : what happens if i change name of file in a repo (case 1 locally, case to remote)
 
-====================?BRANCHING OFF MASTER: github/git-flow==================
+==================BRANCHING OFF MASTER: git-flow: also gihutb flow==========
 - feature branch
 - direct deplyment
 - regular deployment
 - continuos delivery
-- hw 2 : dev strategy
-description : commit to master separate branches, 
-then push the *master to github. then iterate (git push origin master)
+- hw 1 : BRANCHIES
+description : commit to master separate branches, merge feature branch with master, then push the *master to github. then iterate (git push origin master)
 - do same for branch 2, 3 , ...etc
 
 # created files : file and readme 
@@ -189,6 +188,7 @@ $ git merge --no-f feature1  (no space in btn)
 > says already uptodate
 $ git push origin master 
 
+
 NOW: try to replicate again what you have done
 1. create branch off master: call it feature2 
 $ git checkout -b feature2 master 
@@ -201,30 +201,164 @@ $ git add file(1)
 $ git commit -m 'another tweak'
 5. checkout to master 
 $ git checkout master
----make sure you are in master branch
+6. make sure you are in master branch
 $ git branch 
---- you might need to add some changes from the other file running with master
+- you might need to add some changes from the other file running with master
 $ git status
-choose file to add in master
+7. choose file to add in master
 $ git add particularfile
 $ git commit -m 'identify msg'
-6. MERGE feature2 with master with no fastforward option 
-$ git merge --no-ff feature2
-7. PUSH back to remote
+8. MERGE feature2 with master with no fastforward option // what if you do not merge?
+$ git merge --no-f feature2
+9. PUSH back to remote
 $ git push origin master
-8. observe your merged branch if has been pushed back to master from github-insight-network 
+10. observe your merged branch if has been pushed back to master from github-insight-network 
 
 write commands of the above.
 see that you dont miss any step 
 if error, write why and write in capital what you missed and command you missed
 try to do this off your memory 
+
+GOOD JOB.
+EVERYTHING WORKS FINE!!
+
+small problem: I have only one branch 
+
  
 ====================BRANCHING OFF MASTER: github/git-flow==================
 - feature branch
-- hw 1 : branchies
-description : commit to master separate branches, 
+- hw 2 : dev strategies
+description : commit to master separate branches, merge is done or not?
 then push that particular *branch to github /origin. then iterate (git push origin feature)
 - do same for branch 2, 3 , ...etc
 
+# created files : file and readme 
+$ touch file readme.md 
+# create branch file 
+$ git branch file 
+# check to see which branch you are currently in 
+$ git branch 
+> currently its master and it is green 
+> branch is up to date with o/m 
+> git add file : to update what will be commited 
+# check to see status of your files 
+$ git status 
+> both file and readme.md are red . what about text ? 
+this file am currently writing in doesnt seem to 
 
+# creating a feature1 branch 
+# branch off from master branch 
+//$ git checkout -b feature1 master 
+> switch to  new branch feature1 
+# question, what is -b flag in git? 
+: `git` tells the console to load git program from the system path , 
+after that, each word gets inputted into the git program 
+To get help to see which types of commands we can input in git, use --help 
+$ git --help 
+> git help -a or git help -g or git help <concept> to read about 
+specific subcommand/guide/concept 
+> Read more about this from git documentation found at git-scm.com/docs/git-checkout ...
+
+IMPORTANT: from what we have practised above, it is important to add and commit 
+you dont have to push, as all commits will show up either way in any PUSH you do further down the line 
+
+back to creating branch and push directly!
+
+$ git status
+still reds 
+$ git branch
+master and file 
+$ git checkout -b feature1 master
+> M   text ...what does this even mean ????
+> Switched to a new branch 'feature1'
+# maybe add particular file 
+$ git add file 
+# maybe commit changes as well
+$ git commit -m 'first command in first feature'
+# remember nothing shows in the github as nothing is pushed yet 
+# imncorporating a finished feature1 on master, switch branch to master 
+$ git checkout master
+# check which branch you had 
+$ git branch 
+# you should be on master
+# first add and commmit all the new changes in files at master 
+which ones are they?
+$ git status 
+> notice file file is no longer red, only text (this one ), and other files readme 
+$ git add text 
+# check to see how it all is 
+$ git status
+> after tracking/add text, text file is green now  
+# add  changes / commit  
+$ git commit -m 'added stuff in text before after branching off and back '
+# about to push feature1 branch ...
+
+
+after adding the touched text file thru master and while in master...
+!!!do MERGE of feature1 to master, so u can push the master back to origin 
+and NOT the feature as is back to origin as in homework2 dev-strategy 
+
+# first check which branches names are there especially one u want to merge 
+$ git branch 
+# choose branch you want to merge back to master 
+$ git merge feature1 
+
+# see how to deal with merge msg
+
+# next time try to use --no -ff for no fastforward to create a new commit 
+ even if merge could be performed with fast-forward 
+
+$ git branch 
+$ git status
+
+!!!!!!# time to push the master whihc merged with feature1 branch back to remote 
+# REMEMBER you are pushing MERGED MASTER TO ORIGIN !!!VERY IMPORTANT ***
+
+# you should no commits yet, until you have accepted the Pull (which is push really) request on the particular repo
+!!!!! # so check your github repo 
+!!!! # didnt work, must be the weird merge msg 
+try using --no -f for no fast forward when merging
+then check git branch and git status
+$ git branch
+> all branches present, feature1, master and another one 
+$ git status 
+> red text file and others, but green file file
+# now while in master, do the branch merge again to master 
+$ git merge --no-f feature1  (no space in btn)
+> says already uptodate
+$ git push origin master 
+
+
+NOW: try to replicate again what you have done
+1. create branch off master: call it feature2 
+$ git checkout -b feature2 master 
+2. make sure you have checked out 
+$ git branch
+3. do anything with anything whatever
+$ touch file2 or add some changes to say file and save
+4. save, add and commited 
+$ git add file(1)
+$ git commit -m 'another tweak'
+5. checkout to master 
+$ git checkout master
+6. make sure you are in master branch
+$ git branch 
+- you might need to add some changes from the other file running with master
+$ git status
+7. choose file to add in master
+$ git add particularfile
+$ git commit -m 'identify msg'
+8. MERGE feature2 with master with no fastforward option 
+$ git merge --no-f feature2
+9. PUSH back to remote
+$ git push origin master
+10. observe your merged branch if has been pushed back to master from github-insight-network 
+
+write commands of the above.
+see that you dont miss any step 
+if error, write why and write in capital what you missed and command you missed
+try to do this off your memory 
+
+GOOD JOB.
+EVERYTHING WORKS FINE!!
 
