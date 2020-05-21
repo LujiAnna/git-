@@ -1,0 +1,19 @@
+0. This file started in remote with name git_
+Was cloned as such in folder HYF, hence it has the name git_
+1. Renamed remote repo from git- to git_rename_github 
+also new file was created in local repo
+
+a. How to incorporate that new name from local repo
+b. and incorporate local changes back to remote
+
+Try...
+
+
+push changes from this git_ back to master 
+ls 
+> shows the new file text-- the one am writing all this in
+$ git status
+> shows red text as untracked file
+// oops...before tracking, I changed again this text file by writing this 
+line, just save, no need to commit as fike is still untracked yet (no git add, just quick check with git status.. which still shows the red text file as untracked)
+$ git add -m '
