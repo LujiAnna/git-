@@ -250,16 +250,37 @@ Try:
   option1 : return to master and add /commit in master : doesnt make sense 
   opt2: return to master and do git push master feature : start with this ..not possible 
   $ git push master feature4  ?????? didnt work out 
+  > ....some msg i forgot to write (it was too late and was sleepy)
   
   Option2:
   # go back to branch, and push it from there w/o consulting the master 
   $ git checkout feature4
   > compare and Pull request shows button which reads Can’t automatically merge.
+  maybe could have make a PR ?
 
 Option 3:
 just branch off from origin 
+# I forgot to checkout to master, as I was in feature4 
 $ git branch feature 5
-then push from origin 
+> this branch will be out of feature4, so discard it 
+$ git checkout master
+$ git branch feature6
+$ git checkout feature6 
+or could have done $ git checkout -b feature6 
+
+then 2 subptions:
+-then push feature6 from feature6 to origin  
+$ git push origin feature6 
+> go to github: compare & pull request 
+> couldnt automatically merge, so had to create PR 
+> it has some conflicts 
+> choose option: resolve conflicts 
+> its funny coz everything from file for feature6 had to be deleted for merge to be happening
+> also feature 6 is still hanging and not back to master 
+- push feature7 from feature 7 to origin
+try this  
+- push master from master to origin 
+
 descr: 
 - do same for branch 2, 3 , ...etc
 
