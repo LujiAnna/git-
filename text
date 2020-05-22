@@ -89,7 +89,7 @@ $ git commit -am 'fifth commit before push'
 - regular deployment
 - continuos delivery
 - hw 1 : BRANCHIES
-description : commit to master separate branches, merge feature branch with master, then push the *master to github. then iterate (git push origin master)
+description : commit to the separate branches, merge feature branch with master, then push the *master to github and branch to github. then iterate (git push origin master)
 - do same for branch 2, 3 , ...etc
 
 # created files : file and readme 
@@ -212,6 +212,8 @@ $ git commit -m 'identify msg'
 $ git merge --no-f feature2
 9. PUSH back to remote
 $ git push origin master
+$ git push origin feature2
+
 10. observe your merged branch if has been pushed back to master from github-insight-network 
 
 write commands of the above.
@@ -242,8 +244,23 @@ $ git push origin feature3
 ====================BRANCHING OFF MASTER: github/git-flow==================
 - feature branch
 - hw 2 : dev strategies
-description : commit to master separate branches, merge is done or not?
-then push that particular *branch to github /origin. then iterate (git push origin feature)
+description : commit to master separate branches, (or push branch to master)
+then push that particular *branch to github /origin. then iterate (git push origin feature) 
+Try: 
+  option1 : return to master and add /commit in master : doesnt make sense 
+  opt2: return to master and do git push master feature : start with this ..not possible 
+  $ git push master feature4  ?????? didnt work out 
+  
+  Option2:
+  # go back to branch, and push it from there w/o consulting the master 
+  $ git checkout feature4
+  > compare and Pull request shows button which reads Can’t automatically merge.
+
+Option 3:
+just branch off from origin 
+$ git branch feature 5
+then push from origin 
+descr: 
 - do same for branch 2, 3 , ...etc
 
 # created files : file and readme 
