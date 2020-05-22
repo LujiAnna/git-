@@ -8,5 +8,4 @@ $ git checkout -b feature1 master
 
 $ git checkout -b feature2 master
 
-performing with no- merge . skipp step no.8
 
