@@ -8,9 +8,4 @@ $ git checkout -b feature1 master
 
 $ git checkout -b feature2 master
 
-performing with no- merge . skip step no.8
-this had to be merged in github by making a PR request, merge etc 
-
-Now trying to commit on branch off origin , (not from master as before.)
-$ git checkout -b feature6 
 
